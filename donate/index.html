@@ -1,13 +1,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 </head>
 <style>
     .whole {
         margin: 15px;
         background-image: url("https://masjidalfarouq.github.io/website-iframes/20160914_162825-940x460(1).jpg");
-        border-radius: 64px;
-        height: 460px;
+        height: 1080px;
         /* Position and center the image to scale nicely on all screens */
         background-position: center;
         background-repeat: no-repeat;
@@ -23,8 +22,11 @@
         transform: translateY(-50%);
     }
 
+    .card-inner {
+        padding: 2rem;
+    }
     .headings-style {
-        font-family: trocchi;
+        font-family: trocchi, serif;
         text-align: center;
     }
 
@@ -40,45 +42,58 @@
         background: #005137;
         color: #8af8c5
     }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    @media (max-width: 750px) {
+        .buttons {
+            flex-direction: column;
+        }
+    }
 </style>
 <div class="whole">
     <script src="js/iframeResizer.contentWindow.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/beercss@3.1.1/dist/cdn/beer.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/beercss@3.1.1/dist/cdn/beer.min.css" rel="stylesheet"/>
     <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.1.1/dist/cdn/beer.min.js"></script>
     <script type="module"
             src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.7/dist/cdn/material-dynamic-colors.min.js"></script>
-    <article class="donationCard vertical-center small-blur medium-margin medium-padding round">
-        <h2 class="headings-style">Masjid Al Farouq Expansion</h2>
-        <h5 class="headings-style">Phase One: Land Purchase</h5>
-        <div class="hidden-sff">
+    <article class="vertical-center small-blur medium-margin medium-padding">
+        <div class="card-inner">
+            <h2 class="headings-style">Masjid Al Farouq Expansion</h2>
+            <h5 class="headings-style">Phase One: Land Purchase</h5>
+            <div class="hidden-sff">
       <span class="hidden-sff">
         We are now accepting donations towards the purchase of the land that was the former car wash adjacent to the masjid on Wednesbury Road.
       </span>
-            <br />
-            <span>
+                <br/>
+                <span>
                 This will greatly enhance our capacity to serve our community better by providing additional facilities for women, youth and community events.
-
+                    By clicking on one of the bottom donation buttons, you will be redirected to Enthuse who handle our online donations.
       </span>
+            </div>
+            <nav class="center-align buttons">
+                <a href="https://masjidalfarouq.enthuse.com/LandSingle">
+                    <article class="btnCard">
+                        <i class="responsive extra">currency_pound</i>
+                        <div class="padding">
+                            <h5 class="headings-style">One-Off Donation</h5>
+                            <p>Make a One-Off Donation</p>
+                        </div>
+                    </article>
+                </a>
+                <a href="https://masjidalfarouq.enthuse.com/LandMonthly">
+                    <article class="btnCard">
+                        <i class="responsive extra">autopay</i>
+                        <div class="padding">
+                            <h5 class="headings-style">Monthly Payments</h5>
+                            <p>Set up Recurring Payments towards the project</p>
+                        </div>
+                    </article>
+                </a>
+            </nav>
         </div>
-        <nav class="center-align ">
-            <a href="/donate">
-                <article class="btnCard">
-                    <i class="responsive extra">paid</i>
-                    <div class="padding">
-                        <h5 class="headings-style">One-Off Donation</h5>
-                        <p>Make a One-Off Donation</p>
-                    </div>
-                </article>
-            </a>
-            <a href="/donate">
-            <article class="btnCard">
-                <i class="responsive extra">currency_exchange</i>
-                    <div class="padding">
-                        <h5 class="headings-style">Monthly Payments</h5>
-                        <p>Set up Recurring Payments towards the project</p>
-                    </div>
-            </article>
-            </a>
-        </nav>
     </article>
 </div>
