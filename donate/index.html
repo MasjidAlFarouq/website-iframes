@@ -33,6 +33,13 @@
             display: none !important;
         }
     }
+
+    .btnCard {
+        display: flex;
+        flex-direction: column;
+        background: #005137;
+        color: #8af8c5
+    }
 </style>
 <div class="whole">
     <script src="js/iframeResizer.contentWindow.min.js"></script>
@@ -54,10 +61,23 @@
       </span>
         </div>
         <nav class="center-align ">
-            <a style="background: #006c4b" class="button extra round"
-               href="/donate">
-                <i>volunteer_activism</i>
-                <span>Donate Now</span>
+            <a href="/donate">
+                <article class="btnCard">
+                    <i class="responsive extra">paid</i>
+                    <div class="padding">
+                        <h5 class="headings-style">One-Off Donation</h5>
+                        <p>Make a One-Off Donation</p>
+                    </div>
+                </article>
+            </a>
+            <a href="/donate">
+            <article class="btnCard">
+                <i class="responsive extra">currency_exchange</i>
+                    <div class="padding">
+                        <h5 class="headings-style">Monthly Payments</h5>
+                        <p>Set up Recurring Payments towards the project</p>
+                    </div>
+            </article>
             </a>
         </nav>
     </article>
