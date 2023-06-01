@@ -25,9 +25,9 @@
     .card-inner {
         padding: 2rem;
     }
+
     .headings-style {
         font-family: trocchi, serif;
-        text-align: center;
     }
 
     @media (max-width: 480px) {
@@ -39,6 +39,7 @@
     .btnCard {
         display: flex;
         flex-direction: column;
+        align-items: center;
         background: #005137;
         color: #8af8c5
     }
@@ -53,6 +54,11 @@
             flex-direction: column;
         }
     }
+
+    .center-align-text {
+        text-align: center;
+        justify-content: center;
+    }
 </style>
 <div class="whole">
     <script src="js/iframeResizer.contentWindow.min.js"></script>
@@ -61,23 +67,23 @@
     <script type="module"
             src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.7/dist/cdn/material-dynamic-colors.min.js"></script>
     <article class="vertical-center small-blur medium-margin medium-padding">
-        <div class="card-inner">
-            <h2 class="headings-style">Masjid Al Farouq Expansion</h2>
-            <h5 class="headings-style">Phase One: Land Purchase</h5>
-            <div class="hidden-sff">
-      <span class="hidden-sff">
-        We are now accepting donations towards the purchase of the land that was the former car wash adjacent to the masjid on Wednesbury Road.
-      </span>
-                <br/>
-                <span>
+        <div class="card-inner center-align">
+            <h2 class="headings-style center-align-text">Masjid Al Farouq Expansion</h2>
+            <h5 class="headings-style center-align-text">Phase One: Land Purchase</h5>
+            <div class="hidden-sff center-align-text">
+              <span>
+                We are now accepting donations towards the purchase of the land that was the former car wash adjacent to the masjid on Wednesbury Road.
+              </span>
+              <br/>
+              <span>
                 This will greatly enhance our capacity to serve our community better by providing additional facilities for women, youth and community events.
-                    By clicking on one of the bottom donation buttons, you will be redirected to Enthuse who handle our online donations.
-      </span>
+                By clicking on one of the bottom donation buttons, you will be redirected to Enthuse who handle our online donations.
+              </span>
             </div>
             <nav class="center-align buttons">
-                <a href="https://masjidalfarouq.enthuse.com/LandSingle">
+                <a href="https://masjidalfarouq.enthuse.com/Land">
                     <article class="btnCard">
-                        <i class="responsive extra">currency_pound</i>
+                        <i class="extra">currency_pound</i>
                         <div class="padding">
                             <h5 class="headings-style">One-Off Donation</h5>
                             <p>Make a One-Off Donation</p>
@@ -86,10 +92,12 @@
                 </a>
                 <a href="https://masjidalfarouq.enthuse.com/LandMonthly">
                     <article class="btnCard">
-                        <i class="responsive extra">autopay</i>
-                        <div class="padding">
-                            <h5 class="headings-style">Monthly Payments</h5>
-                            <p>Set up Recurring Payments towards the project</p>
+                        <div class="btnCard">
+                            <i class="extra">autopay</i>
+                            <div class="padding">
+                                <h5 class="headings-style">Monthly Payments</h5>
+                                <p>Set up Recurring Payments towards the project</p>
+                            </div>
                         </div>
                     </article>
                 </a>
